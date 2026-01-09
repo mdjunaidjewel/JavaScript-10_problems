@@ -10,3 +10,18 @@ Input: "hello"
 Output: false
 
 */
+
+function isPalindrome(str) {
+  // Convert to lowercase and remove non-alphanumeric characters
+  const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  
+  // Reverse the string
+  const reversedStr = cleanedStr.split("").reverse().join("");
+  
+  // Check if original and reversed are the same
+  return cleanedStr === reversedStr;
+}
+
+// Example usage
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("Hello"));
